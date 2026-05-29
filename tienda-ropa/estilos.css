@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+/* HERO */
+
+.hero{
+    height: 100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200');
+
+    background-size: cover;
+    background-position: center;
+
+    animation: zoom 10s infinite alternate;
+}
+
+/* MENU */
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    padding: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    background: rgba(0,0,0,0.4);
+
+    backdrop-filter: blur(12px);
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+nav a:hover{
+    background: #8b5cf6;
+    transform: translateY(-3px);
+}
+
+/* TEXTO HERO */
+
+.hero-texto{
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.hero-texto h1{
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-align: center;
+}
+
+.hero-texto p{
+    margin-top: 20px;
+    font-size: 24px;
+    color: #d1d5db;
+    text-align: center;
+    max-width: 700px;
+}
+/* TITULOS */
+
+.titulo{
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.titulo h2{
+    font-size: 50px;
+    color: #8b5cf6;
+}
+
+/* TARJETAS */
+
+.productos{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px 40px 80px;
+}
+
+.card{
+    width: 320px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    transition: 0.5s;
+
+    box-shadow: 0px 5px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform: translateY(-15px) scale(1.02);
+}
+
+.card img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/* INFO */
+
+.info{
+    padding: 25px;
+}
+
+.info h3{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info p{
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+/* GALERIA */
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.galeria img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    transition: 0.5s;
+
+    box-shadow: 0px 5px 30px rgba(0,0,0,0.4);
+}
+
+.galeria img:hover{
+    transform: scale(1.04);
+}
+
+/* FORMULARIO */
+
+form{
+    width: 60%;
+    margin: auto;
+
+    background: rgba(255,255,255,0.05);
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0px 5px 30px rgba(0,0,0,0.4);
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 18px;
+    margin: 15px 0;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color: #d1d5db;
+}
+
+button{
+    width: 100%;
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #8b5cf6;
+
+    color: white;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+button:hover{
+    background: #6d28d9;
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+
+footer{
+    text-align: center;
+    padding: 30px;
+    background: #111111;
+    color: #9ca3af;
+}
+
+/* ANIMACIONES */
+
+@keyframes zoom{
+
+    from{
+        background-size: 100%;
+    }
+
+    to{
+        background-size: 110%;
+    }
+}
+/* CONTENEDOR GENERAL */
+
+.contenedor{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* TITULOS */
+
+h1,h2,h3,p{
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero-texto h1{
+        font-size: 60px;
+    }
+
+    .hero-texto p{
+        font-size: 18px;
+    }
+
+    nav{
+        flex-wrap: wrap;
+    }
+
+    form{
+        width: 90%;
+    }
+}
